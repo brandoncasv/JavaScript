@@ -6,14 +6,25 @@ const div_Green = document.getElementById('color_Green');
 
 
 function startGame() {
-    let game = new Game();
+     window.game = new Game();
 }
 
 class Game {
     constructor() {
         this.inicializar();
+        this.generateSequence()
     }
     inicializar() {
         btn_Start.classList.add('hide');
+        this.level = 1;
+        this.colors = {
+            div_Blue, div_Violet, div_Orange, div_Green
+        };
+
+    }
+    generateSequence() {
+        this.sequence = new Array(10).fill(0).map(
+            n => Math.floor(Math.random() * 4)
+        );
     }
 }
