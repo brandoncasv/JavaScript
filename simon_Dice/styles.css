@@ -10,6 +10,8 @@ html body {
     display: none;    
 }
 
+
+
 #main_Content {
     position: relative;
     padding: 15% 25%;
@@ -28,35 +30,47 @@ html body {
 
 
 /* Content Top */
-#color_Blue {
+.blue {
     background: hsl(202, 90%, 45%);
     width: 40%;
     height: 200px;
     border-top-left-radius: 100%;
 }
+.blue.light {
+    background: hsl(202, 82%, 58%);
+}
 
-#color_Violet {
+.violet {
     background: hsl(315, 97%, 37%);
     width: 40%;
     height: 200px;
     border-top-right-radius: 100%;
 
 }
+.violet.light {
+    background: hsl(315, 83%, 57%);
+}
 /* Content Top */
 
 /* Content bottom */
-#color_Orange {
+.orange {
     background: hsl(27, 100%, 51%);
     width: 40%;
     height: 200px;
     border-bottom-left-radius: 100%;
-
 }
-#color_Green {
+.orange.light {
+    background: hsl(27, 83%, 61%);
+}
+
+.green {
     background: hsl(91, 100%, 32%);
     width: 40%;
     height: 200px;
     border-bottom-right-radius: 100%;
+}
+.green.light {
+    background: hsl(91, 80%, 43%);
 }
 /* Content bottom */
 
