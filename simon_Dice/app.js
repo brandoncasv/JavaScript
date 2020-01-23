@@ -19,7 +19,7 @@ class Game {
     }
     inicializar() {
         btn_Start.classList.add('hide');
-        this.level = 2;
+        this.level = 1;
         this.colors = {
             div_Blue, div_Violet, div_Orange, div_Green
         };
@@ -46,6 +46,7 @@ class Game {
 
     iluminateColor(color) {
         this.colors[color].classList.add('light');
+        setTimeout(() => this.offColor(color), 350)
     }
 
     offColor(color) {
@@ -54,19 +55,8 @@ class Game {
 
     iluminateSequence() {
         for(let i = 0; i < this.level; i++) {
-            let color = this.transformNumberToColor(this.sequence[i])
-            if(i < 1) {
-                () => {
-                    setTimeout(this.iluminateColor(color), 1000)
-                    setTimeout(this.offColor(color), 800)
-                }
-             } else {
-                 () => {
-                     setTimeout(this.iluminateColor(color), 2000 * i)
-                     setTimeout(this.offColor(color), 800 * i)
-                }
-
+            const color = this.transformNumberToColor(this.sequence[i])                          
+                setTimeout(() => this.iluminateColor(color), 1000 * i)             
             }
         }
     }
-}
